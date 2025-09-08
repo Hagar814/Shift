@@ -8,7 +8,15 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
-
+doctype_js = {
+    "Item": "public/js/item.js",
+    "Sales Invoice": "public/js/sales_invoice_item.js"
+}
+doc_events = {
+    "Sales Invoice": {
+        "before_save": "shift.api.set_barcode_attach"
+    }
+}
 # include js, css files in header of desk.html
 # app_include_css = "/assets/shift/css/shift.css"
 # app_include_js = "/assets/shift/js/shift.js"
