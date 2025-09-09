@@ -67,7 +67,7 @@ def update_item_barcodes(item_name):
 @frappe.whitelist()
 def set_barcode_attach(doc, method):
     for row in doc.items:
-        if row.barcode and row.item_code:
+        if row.barcode and row.item_code and not row.custom_barcode_attach:
             attach = frappe.db.get_value("Item Barcode", {
                 "parent": row.item_code,   # parent = Item name
                 "barcode": row.barcode
