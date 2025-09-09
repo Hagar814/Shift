@@ -15,6 +15,12 @@ doctype_js = {
 doc_events = {
     "Sales Invoice": {
         "before_save": "shift.api.set_barcode_attach"
+    },
+    "Purchase Receipt": {
+        "before_save": "shift.api.set_barcode_attach"
+    }
+    "Delivery Note": {
+        "before_save": "shift.api.set_barcode_attach"
     }
 }
 # include js, css files in header of desk.html
