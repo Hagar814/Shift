@@ -18,7 +18,7 @@ doc_events = {
     },
     "Purchase Receipt": {
         "before_save": "shift.api.set_barcode_attach"
-    }
+    },
     "Delivery Note": {
         "before_save": "shift.api.set_barcode_attach"
     }
